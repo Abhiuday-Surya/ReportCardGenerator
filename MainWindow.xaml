@@ -1,0 +1,149 @@
+<Window
+    x:Class="ReportCardGenerator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReportCardGenerator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Report Card Generator"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <DesktopAcrylicBackdrop />
+    </Window.SystemBackdrop>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <StackPanel Margin="20">
+                <TextBlock Text="Student Report Card" FontSize="24" FontWeight="Bold" Margin="10" HorizontalAlignment="Center"/>
+
+                <!-- Student Details Section -->
+                <TextBlock Text="Student Details" FontSize="20" FontWeight="Bold" Margin="10"/>
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Name:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+                    <TextBox x:Name="NameTextBox" Grid.Row="0" Grid.Column="1" Margin="5" PlaceholderText="Enter Name"/>
+
+                    <TextBlock Text="Registration No:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+                    <TextBox x:Name="RegNoTextBox" Grid.Row="1" Grid.Column="1" Margin="5" PlaceholderText="Enter Registration No"/>
+
+                    <TextBlock Text="Semester:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+                    <TextBox x:Name="SemesterTextBox" Grid.Row="2" Grid.Column="1" Margin="5" PlaceholderText="Enter Semester"/>
+
+                    <TextBlock Text="Branch:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+                    <TextBox x:Name="BranchTextBox" Grid.Row="3" Grid.Column="1" Margin="5" PlaceholderText="Enter Branch"/>
+
+                    <!--<ComboBox x:Name="BranchComboBox" SelectionChanged="ColorComboBox_SelectionChanged" Width="200" Grid.Row="3" Grid.Column="1">
+                        <x:String>Computer Science ( Core )</x:String>
+                        <x:String>Computer Science ( Regional )</x:String>
+                        <x:String>Computer Science ( IoT )</x:String>
+                        <x:String>Computer Science ( Data Science )</x:String>
+                        <x:String>Computer Science ( Artificial Intelligence )</x:String>
+                        <x:String>Computer Science ( Artificial Intelligence & Data Science )</x:String>
+                    </ComboBox>-->
+                </Grid>
+
+                <!-- Lecture and Lab Sections Side by Side -->
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Lecture Section -->
+                    <StackPanel Grid.Column="0" Margin="5">
+                        <TextBlock Text="Lecture" FontSize="20" FontWeight="Bold" Margin="10"/>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Subject Code" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Grade" Grid.Row="0" Grid.Column="1" FontWeight="Bold" Margin="5"/>
+
+                            <!-- Repeat for each subject -->
+                            <TextBox x:Name="SubjectCode1" Grid.Row="1" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
+                            <TextBox x:Name="Grade1" Grid.Row="1" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="SubjectCode2" Grid.Row="2" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
+                            <TextBox x:Name="Grade2" Grid.Row="2" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="SubjectCode3" Grid.Row="3" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
+                            <TextBox x:Name="Grade3" Grid.Row="3" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="SubjectCode4" Grid.Row="4" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
+                            <TextBox x:Name="Grade4" Grid.Row="4" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="SubjectCode5" Grid.Row="5" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
+                            <TextBox x:Name="Grade5" Grid.Row="5" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="SubjectCode6" Grid.Row="6" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
+                            <TextBox x:Name="Grade6" Grid.Row="6" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <!-- Labs Section -->
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <TextBlock Text="Labs" FontSize="20" FontWeight="Bold" Margin="10"/>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Lab Code" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Grade" Grid.Row="0" Grid.Column="1" FontWeight="Bold" Margin="5"/>
+
+                            <!-- Repeat for each lab -->
+                            <TextBox x:Name="LabCode1" Grid.Row="1" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
+                            <TextBox x:Name="LabGrade1" Grid.Row="1" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="LabCode2" Grid.Row="2" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
+                            <TextBox x:Name="LabGrade2" Grid.Row="2" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="LabCode3" Grid.Row="3" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
+                            <TextBox x:Name="LabGrade3" Grid.Row="3" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="LabCode4" Grid.Row="4" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
+                            <TextBox x:Name="LabGrade4" Grid.Row="4" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="LabCode5" Grid.Row="5" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
+                            <TextBox x:Name="LabGrade5" Grid.Row="5" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <TextBox x:Name="LabCode6" Grid.Row="6" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
+                            <TextBox x:Name="LabGrade6" Grid.Row="6" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Remarks " Margin="5"/>
+                    <TextBox x:Name="Remarks" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" Width="1000" />
+                </StackPanel>
+
+                <Button Style="{StaticResource AccentButtonStyle}" Content="Submit" FontSize="16" FontWeight="Bold" Margin="10" HorizontalAlignment="Center" Padding="10,5" Click="SubmitButton_Click" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ReportCardGenerator (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ReportCardGenerator (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
