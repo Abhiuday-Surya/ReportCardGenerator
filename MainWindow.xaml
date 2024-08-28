@@ -83,7 +83,7 @@
                             <TextBlock Text="Subject Code" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="5"/>
                             <TextBlock Text="Grade" Grid.Row="0" Grid.Column="1" FontWeight="Bold" Margin="5"/>
 
-                            <!-- Repeat for each subject -->
+                            
                             <TextBox x:Name="SubjectCode1" Grid.Row="1" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
                             <TextBox x:Name="Grade1" Grid.Row="1" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
                             <TextBox x:Name="SubjectCode2" Grid.Row="2" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
@@ -120,7 +120,7 @@
                             <TextBlock Text="Lab Code" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="5"/>
                             <TextBlock Text="Grade" Grid.Row="0" Grid.Column="1" FontWeight="Bold" Margin="5"/>
 
-                            <!-- Repeat for each lab -->
+                            
                             <TextBox x:Name="LabCode1" Grid.Row="1" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
                             <TextBox x:Name="LabGrade1" Grid.Row="1" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
                             <TextBox x:Name="LabCode2" Grid.Row="2" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>

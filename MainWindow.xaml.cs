@@ -61,40 +61,31 @@ namespace ReportCardGenerator
         public static void GenerateReportCard(string studentName, string regNo, string semester, string branch,
                                               string[] subjectCodes, string[] grades, string[] labCodes, string[] labGrades, string remarks)
         {
-            // Create a new PDF document
             PdfDocument document = new PdfDocument();
             document.Info.Title = "Student Report Card";
 
-            // Create an empty page
             PdfPage page = document.AddPage();
             XGraphics gfx = XGraphics.FromPdfPage(page);
 
-            // Define fonts
             XFont fontTitle = new XFont("Times New Roman", 20);
             XFont fontSection = new XFont("Times New Roman", 14);
             XFont fontText = new XFont("Times New Roman", 12);
 
-            // Define gold pen for the border
-            XPen goldPen = new XPen(XColor.FromArgb(255, 212, 175), 5); // RGB color for gold with thicker width
+            XPen goldPen = new XPen(XColor.FromArgb(255, 212, 175), 5); 
 
-            // Draw a gold border around the page
             gfx.DrawRectangle(goldPen, 10, 10, page.Width - 20, page.Height - 20);
 
-            // Add the college logo
             
 
-            // Draw the title
             gfx.DrawString("Student Report Card", fontTitle, XBrushes.Black,
                            new XRect(0, 100, page.Width, 40), XStringFormats.Center);
 
-            // Draw border and student details
             gfx.DrawString("Student Details", fontSection, XBrushes.Black, 40, 230);
             gfx.DrawString($"Name: {studentName}", fontText, XBrushes.Black, 40, 260);
             gfx.DrawString($"Registration No: {regNo}", fontText, XBrushes.Black, 40, 280);
             gfx.DrawString($"Semester: {semester}", fontText, XBrushes.Black, 40, 300);
             gfx.DrawString($"Branch: {branch}", fontText, XBrushes.Black, 40, 320);
 
-            // Draw border and lecture section
             gfx.DrawString("Lecture", fontSection, XBrushes.Black, 40, 360);
             int yOffset = 390;
             for (int i = 0; i < subjectCodes.Length; i++)
@@ -104,7 +95,6 @@ namespace ReportCardGenerator
                 yOffset += 20;
             }
 
-            // Draw border and labs section
             gfx.DrawString("Labs", fontSection, XBrushes.Black, 40, yOffset + 40);
             yOffset += 70;
             for (int i = 0; i < labCodes.Length; i++)
@@ -118,18 +108,15 @@ namespace ReportCardGenerator
 
 
 
-            // Save the document
             try
             {
                 string filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"ReportCard_{studentName.Replace(" ", "_")}.pdf");
                 document.Save(filename);
 
-                // Optional: Open the file automatically
                 Process.Start(new ProcessStartInfo(filename) { UseShellExecute = true });
             }
             catch (Exception ex)
             {
-                // Handle the exception
                 Console.WriteLine($"An error occurred while saving the PDF: {ex.Message}");
             }
         }
