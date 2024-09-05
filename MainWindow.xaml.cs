@@ -42,11 +42,25 @@ namespace ReportCardGenerator
             string remarks = Remarks.Text;
 
             string[] subjectCodes = new[] { SubjectCode1.Text, SubjectCode2.Text, SubjectCode3.Text, SubjectCode4.Text, SubjectCode5.Text, SubjectCode6.Text };
-            string[] grades = new[] { Grade1.Text, Grade2.Text, Grade3.Text, Grade4.Text, Grade5.Text, Grade6.Text };
+            string[] grades = new[] {
+                (Grade1ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (Grade2ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (Grade3ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (Grade4ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (Grade5ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (Grade6ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString()
+            };
 
+            // Assuming you have similar ComboBoxes for lab grades
             string[] labCodes = new[] { LabCode1.Text, LabCode2.Text, LabCode3.Text, LabCode4.Text, LabCode5.Text, LabCode6.Text };
-            string[] labGrades = new[] { LabGrade1.Text, LabGrade2.Text, LabGrade3.Text, LabGrade4.Text, LabGrade5.Text, LabGrade6.Text };
-
+            string[] labGrades = new[] {
+                (LabGrade1ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (LabGrade2ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (LabGrade3ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (LabGrade4ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (LabGrade5ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                (LabGrade6ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString()
+            };
             PdfReportGenerator.GenerateReportCard(studentName, regNo, semester, branch, subjectCodes, grades, labCodes, labGrades, remarks);
         }
 
@@ -71,11 +85,11 @@ namespace ReportCardGenerator
             XFont fontSection = new XFont("Times New Roman", 14);
             XFont fontText = new XFont("Times New Roman", 12);
 
-            XPen goldPen = new XPen(XColor.FromArgb(255, 212, 175), 5); 
+            XPen goldPen = new XPen(XColor.FromArgb(255, 212, 175), 5);
 
             gfx.DrawRectangle(goldPen, 10, 10, page.Width - 20, page.Height - 20);
 
-            
+
 
             gfx.DrawString("Student Report Card", fontTitle, XBrushes.Black,
                            new XRect(0, 100, page.Width, 40), XStringFormats.Center);

@@ -83,19 +83,56 @@
                             <TextBlock Text="Subject Code" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="5"/>
                             <TextBlock Text="Grade" Grid.Row="0" Grid.Column="1" FontWeight="Bold" Margin="5"/>
 
-                            
+
+
                             <TextBox x:Name="SubjectCode1" Grid.Row="1" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
-                            <TextBox x:Name="Grade1" Grid.Row="1" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="Grade1ComboBox" Width="100" Grid.Row="1" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="SubjectCode2" Grid.Row="2" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
-                            <TextBox x:Name="Grade2" Grid.Row="2" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="Grade2ComboBox" Width="100" Grid.Row="2" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="SubjectCode3" Grid.Row="3" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
-                            <TextBox x:Name="Grade3" Grid.Row="3" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="Grade3ComboBox" Width="100" Grid.Row="3" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="SubjectCode4" Grid.Row="4" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
-                            <TextBox x:Name="Grade4" Grid.Row="4" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="Grade4ComboBox" Width="100" Grid.Row="4" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="SubjectCode5" Grid.Row="5" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
-                            <TextBox x:Name="Grade5" Grid.Row="5" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="Grade5ComboBox" Width="100" Grid.Row="5" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="SubjectCode6" Grid.Row="6" Grid.Column="0" PlaceholderText="Enter Subject Code" Margin="5"/>
-                            <TextBox x:Name="Grade6" Grid.Row="6" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="Grade6ComboBox" Width="100" Grid.Row="6" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                         </Grid>
                     </StackPanel>
 
@@ -120,26 +157,62 @@
                             <TextBlock Text="Lab Code" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="5"/>
                             <TextBlock Text="Grade" Grid.Row="0" Grid.Column="1" FontWeight="Bold" Margin="5"/>
 
-                            
+
                             <TextBox x:Name="LabCode1" Grid.Row="1" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
-                            <TextBox x:Name="LabGrade1" Grid.Row="1" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="LabGrade1ComboBox" Width="100" Grid.Row="1" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="LabCode2" Grid.Row="2" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
-                            <TextBox x:Name="LabGrade2" Grid.Row="2" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="LabGrade2ComboBox" Width="100" Grid.Row="2" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="LabCode3" Grid.Row="3" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
-                            <TextBox x:Name="LabGrade3" Grid.Row="3" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="LabGrade3ComboBox" Width="100" Grid.Row="3" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="LabCode4" Grid.Row="4" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
-                            <TextBox x:Name="LabGrade4" Grid.Row="4" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="LabGrade4ComboBox" Width="100" Grid.Row="4" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="LabCode5" Grid.Row="5" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
-                            <TextBox x:Name="LabGrade5" Grid.Row="5" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="LabGrade5ComboBox" Width="100" Grid.Row="5" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                             <TextBox x:Name="LabCode6" Grid.Row="6" Grid.Column="0" PlaceholderText="Enter Lab Code" Margin="5"/>
-                            <TextBox x:Name="LabGrade6" Grid.Row="6" Grid.Column="1" PlaceholderText="Enter Grade" Margin="5"/>
+                            <ComboBox x:Name="LabGrade6ComboBox" Width="100" Grid.Row="6" Grid.Column="1">
+                                <ComboBoxItem Content="A" />
+                                <ComboBoxItem Content="B" />
+                                <ComboBoxItem Content="C" />
+                                <ComboBoxItem Content="D" />
+                                <ComboBoxItem Content="E" />
+                            </ComboBox>
                         </Grid>
                     </StackPanel>
                 </Grid>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Remarks " Margin="5"/>
-                    <TextBox x:Name="Remarks" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" Width="1000" />
+                    <TextBox x:Name="Remarks" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" Width="1400" />
                 </StackPanel>
 
                 <Button Style="{StaticResource AccentButtonStyle}" Content="Submit" FontSize="16" FontWeight="Bold" Margin="10" HorizontalAlignment="Center" Padding="10,5" Click="SubmitButton_Click" />
